@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Our Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<audio autoplay="autopaly">
+		<source src="music/love.mp3" type="audio/mp3" />
+	</audio> 
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="space"/><span class="comments"></span><br />
+				Gửi đến bạn th pồ nk ặ :)</span><br />
+				<span class="comments">// Feb 14, 2022, tui đã tỏ tình bạn</span><br />
+				Lúc đó tui cảm thấy hồi hộp và sợ vải vì không biết bạn có đồng ý làm ngyeu tui khom :D<br />
+				<span class="comments">// Đìu tuỵt zời là bạn đã đồng ý =))</span><br />
+				Lúc đó tui hơi sốc và bất ngờ vì trước đó t khom nghĩ là bạn thích tui và đồng ý làm ngyeu của một thằng như t :)<br />
+				<span class="comments">// Sau hôm đó khi nào tui cũng nghĩ đến bạn hết á</span><br />
+				Nói khi nào cũng nhớ nhma không có nghĩa là tui không học bài đâu 😏😏<br />
+				<span class="comments">// Tui đã quen bạn hơn 1 tháng roài hehe</span><br />
+				Được ở bên bạn tui cảm thấy zui và tuỵt lắm idk nhma tuỵt lắmmmmm 😱🥶😇🤡😳 <br />
+				Trong mắt tui b là người vừa deth vừa xink lại còn thông minh, học giỏy vcl luôn với zui tính nữa :)), mấy lúc bùn ngồi nch zới b giúp t đỡ hơn rất nhìuu, cảm ơn b vì nhờ b mà t học được nhiều điều, biết hỏi thăm mọi người xung quanh , ăn nói đàng hoàng hơn tử tế chứ kh ăn nói lấc cấc giống lúc trước :), biết nhường nhịn người khác và kiên nhẫn hơn, từ lúc iu m cuộc đời t như bước sang trang mới z t không còn là t ngày xưa nữa, mỗi ngày ở bên b là mỗi ngày hạnh phúc nhất của t đóa. Cảm ơn bạn nhìu lóm <br /> Anh iu em nhiều lắmmmmm ạ <br /> Mãi bên nhau bạn nhoooo <3 <br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						th, I have fallen in love with u for
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Love u forever and ever.<br/>
+						<div class="signature">- khanh vu -</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+			Copyright © 2022 <a href='https://www.facebook.com/profile.php?id=100069872786658'>khanhvu</a> 
+		</div>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2022, 1, 14);
+		together.setHours(8);
+		together.setMinutes(17);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
